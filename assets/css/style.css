@@ -1,0 +1,48 @@
+/* add body styling*/
+
+.body {
+    margin:auto;
+    width: 100%;
+    display: flexbox;
+    float: inline-end;
+}
+
+/* add header styling*/
+
+.header {
+    margin-bottom: 25px;
+    padding: 50px 50px 50px 50px;
+    background-color: lightcoral;
+    font-size: 50px;
+    width: 100%;
+    color: aliceblue;
+    border: 6px;
+    border-color: darkgrey;
+
+}
+
+.quizBody {
+    display: flex;
+    flex: wrap;
+    
+}
+
+
+
+/* add section styling keep*/
+
+
+/* add sub section styling for questions*/
+
+
+
+/* add button styling*/
+
+
+/* add timer styling*/
+
+
+/* add footer styling*/
+
+
+/* this is just here in case i think of something*/
