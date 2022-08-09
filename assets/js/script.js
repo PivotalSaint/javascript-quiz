@@ -17,9 +17,12 @@
 // WHEN I answer a question
 // Need to add function that logs data and keeps the data stored by the window
 // this variable will effect timer as well if not true and is false
+var questionDisplayed = document.createElement("ol");
 
-
-
+var answer1 = document.createElement("li");
+var answer2 = document.createElement("li");
+var answer3 = document.createElement("li");
+var answer4 = document.createElement("li");
 
 
 // THEN I am presented with another question
