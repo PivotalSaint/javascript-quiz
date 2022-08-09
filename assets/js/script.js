@@ -1,28 +1,41 @@
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
-
+var startQuiz = document.getElementById('questionBody');
+console.log(startQuiz);
 
 // need to add button that prompts or starts code with a timer
-
-
-
 
 // THEN a timer starts and I am presented with a question
 // timer needs to be set function with total time and a variable to subtract that time
 // Add timer function here
+function startQuiz () {
+    document.getElementById("questionList").style.display = value;
+    prompt("would you like to take the javabean quiz?");
+    var quizTime = 6000;
 
+    var timeInterval = setInterval( function(){
+        if (quizTime > 1) {
+            quizTime.textContent = quizTime + 'seconds remaining';
+            quizTime--;
+        }
 
-
+        else if (quizTime ===1) {
+            quizTime.textContent= quizTime + 'seconds remaining';
+            quizTime--;
+        }
+        else {
+            quizTime.textContent = '';
+            clearInterval(timeInterval);
+            displayQuizScore();
+        }
+    });
+}
+    document.addEventListener("click", startQuiz)
 
 // WHEN I answer a question
 // Need to add function that logs data and keeps the data stored by the window
 // this variable will effect timer as well if not true and is false
-var questionDisplayed = document.createElement("ol");
 
-var answer1 = document.createElement("li");
-var answer2 = document.createElement("li");
-var answer3 = document.createElement("li");
-var answer4 = document.createElement("li");
 
 
 // THEN I am presented with another question
