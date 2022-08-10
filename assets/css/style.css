@@ -21,7 +21,11 @@
     border-color: black;
 }
 
-
+.quizTimer {
+    margin: auto;
+    display: flexbox;
+    text-align: center;
+}
 /* add section styling keep*/
 .questionBody {
 font-size: 25px;
@@ -32,7 +36,7 @@ color: aliceblue;
 
 /* add sub section styling for questions*/
 .questionList {
-    display: block;
+    display: flexbox;
     background-color: white;
     border: 2px solid white;
     color: black;
@@ -45,10 +49,16 @@ color: aliceblue;
     height: 75vh;
 }
 
-/* add button styling*/
-button {
+.question {
     display: inline-flexbox;
-    float: right;
+    margin: auto;
+    text-align: center;
+}
+
+/* add button styling*/
+.answers {
+    display: flexbox;
+    display: inside;
     background-color: lightskyblue;
     border-radius: 8px;
     color: white;
@@ -56,8 +66,9 @@ button {
     font-size: 1.2em;
     letter-spacing: 0.21px;
     line-height: 16px;
-    max-width: 255px;
-    padding: 20px 50px;
+    max-width: 300px;
+    padding: 50px 150px;
+    max-height: 300px;
     text-align: center;
     transition-duration: .1s;
     transition-property: background-color;

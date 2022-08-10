@@ -1,34 +1,39 @@
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
-var startQuiz = document.getElementById('questionBody');
-console.log(startQuiz);
+var startQuiz = document.querySelector(".questionBody");
+var quizTimer= document.querySelector(".quizTimer")
 
 // need to add button that prompts or starts code with a timer
 
 // THEN a timer starts and I am presented with a question
 // timer needs to be set function with total time and a variable to subtract that time
 // Add timer function here
-function startQuiz () {
-    document.getElementById("questionList").style.display = value;
-    prompt("would you like to take the javabean quiz?");
-    var quizTime = 6000;
 
-    var timeInterval = setInterval( function(){
-        if (quizTime > 1) {
-            quizTime.textContent = quizTime + 'seconds remaining';
-            quizTime--;
+var quizQuestions 
+
+function startQuiz () {
+
+    var timeLeft = 60;
+
+    var timerInterval = setInterval( function(){
+        if (timeLeft > 1) {
+            timeLeft.textContent = quizTimer + 'seconds remaining';
+            timeLeft--;
         }
 
-        else if (quizTime ===1) {
-            quizTime.textContent= quizTime + 'seconds remaining';
-            quizTime--;
+        else if (timeLeft ===1) {
+            timeLeft.textContent= timeLeft + 'seconds remaining';
+            timeLeft--;
         }
         else {
-            quizTime.textContent = '';
-            clearInterval(timeInterval);
+            timeLeft.textContent = '';
+            clearInterval(timeLeft);
             displayQuizScore();
         }
     });
+}
+function displayQuizScore(){
+
 }
     document.addEventListener("click", startQuiz)
 
