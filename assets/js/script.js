@@ -1,41 +1,108 @@
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
-var startQuiz = document.querySelector(".questionBody");
-var quizTimer= document.querySelector(".quizTimer")
+var startQuiz=document.querySelector("#questionBody");
+var quizTimer= document.querySelector("#quizTimer");
+var answers= document.querySelectorAll("#button");
+var questionList=0;
+var displayQuizScore=0;
+
+var questions = [
+    // question 1
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    // question 2
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 3
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 4
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 5
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 6
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 7
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 8
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 9
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+    //question 10
+    {
+        question:"",
+        choices:"",
+        answers:""
+    },
+];
 
 // need to add button that prompts or starts code with a timer
-
 // THEN a timer starts and I am presented with a question
 // timer needs to be set function with total time and a variable to subtract that time
 // Add timer function here
+var timeLeft = 80;
+var noTime=0;
+var timeOff= 10;
 
-var quizQuestions 
-
-function startQuiz () {
-
-    var timeLeft = 60;
-
-    var timerInterval = setInterval( function(){
+quizTimer.addEventListener("click", startQuiz);
+function quizTimer () {
+    var noTime = setInterval( function(){
+        console.log(quizTimer)
         if (timeLeft > 1) {
             timeLeft.textContent = quizTimer + 'seconds remaining';
             timeLeft--;
         }
 
-        else if (timeLeft ===1) {
+        if (timeLeft ===1) {
             timeLeft.textContent= timeLeft + 'seconds remaining';
             timeLeft--;
         }
         else {
             timeLeft.textContent = '';
-            clearInterval(timeLeft);
+            clearInterval(quizTimer);
             displayQuizScore();
         }
+    var startQuiz=setInterval(quizTimer, 1000);
+
     });
-}
-function displayQuizScore(){
+};
+function generateQuestions(){
+    
 
 }
-    document.addEventListener("click", startQuiz)
 
 // WHEN I answer a question
 // Need to add function that logs data and keeps the data stored by the window

@@ -2,7 +2,7 @@
 
 .body {
     margin:auto;
-    display: flexbox;
+    display: inline-flexbox;
     flex: wrap;
     background-color: darkslategrey;
 }
@@ -25,7 +25,9 @@
     margin: auto;
     display: flexbox;
     text-align: center;
+    font-size: 25px;
 }
+
 /* add section styling keep*/
 .questionBody {
 font-size: 25px;
@@ -49,14 +51,14 @@ color: aliceblue;
     height: 75vh;
 }
 
-.question {
+.questions {
     display: inline-flexbox;
     margin: auto;
     text-align: center;
 }
 
 /* add button styling*/
-.answers {
+.button {
     display: flexbox;
     display: inside;
     background-color: lightskyblue;
