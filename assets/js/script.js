@@ -4,7 +4,7 @@ window.alert("would you like to try this madness?")
 
 var timeLeft = 80;
 var penalty= 10;
-var text = document.querySelector("h3")
+var displayQuestion = document.querySelector("h3")
 var answerA=document.querySelector("#answerA")
 var answerB=document.querySelector("#answerB")
 var answerC=document.querySelector("#answerC")
@@ -61,13 +61,12 @@ function quizTimer () {
         else {
             quizTimer.textContent = "";
             clearInterval(startTime);
-            displayQuizScore();
         }
 
     }, 1000);
 };
 quizTimer();
-text.textContent=questions[currentQuestion].text[0]
+displayQuestion.textContent=questions[currentQuestion].text;
 answerA.textContent=questions[currentQuestion].choices[0];
 answerB.textContent=questions[currentQuestion].choices[1];
 answerC.textContent=questions[currentQuestion].choices[2];
@@ -87,6 +86,7 @@ function checkAnswer(event){
         currentQuestion++ 
         timeLeft = timeLeft - penalty
     }
+    displayQuestion.textContent=questions[currentQuestion].text;
     answerA.textContent=questions[currentQuestion].choices[0];
     answerB.textContent=questions[currentQuestion].choices[1];
     answerC.textContent=questions[currentQuestion].choices[2];
